@@ -1,35 +1,25 @@
-# Calculadora financiera (PyQt5)
+# Calculadora de Ingeniería y Finanzas (PyQt5)
 
-App sencilla y modular para calcular rendimiento neto usando interes simple o interes compuesto.
+Aplicación de escritorio avanzada con arquitectura modular, diseñada para el análisis financiero y la visualización de datos científicos.
 
-## Requisitos
-- Python 3.9+
+## 🚀 Mejoras Implementadas
+- **Arquitectura Multimódulo:** Estructura organizada que separa lógica de negocio, modelos de datos y capa de presentación.
+- **Interfaz Premium (UX):** Diseño moderno en modo oscuro con hojas de estilo personalizadas (QSS) y escalado dinámico por DPI.
+- **Visualización Científica:** Integración nativa de diagramas termodinámicos (Ciclo P-V) usando el motor de renderizado de `Matplotlib`.
+- **Feedback Dinámico:** Animaciones de respuesta visual en el panel de resultados tras cada cálculo.
 
-## Instalacion
+## 🛠️ Tecnologías
+- **Python 3.9+**
+- **PyQt5:** Para la interfaz gráfica de usuario.
+- **Matplotlib:** Para la generación de gráficos de ingeniería.
+- **NumPy:** Para procesamiento de datos científicos.
+
+## Instalación
 ```bash
 python -m venv .venv
+# En Windows:
 .venv\Scripts\activate
+# En Linux/macOS:
+source .venv/bin/activate
+
 pip install -r requirements.txt
-```
-
-## Ejecutar
-```bash
-python app.py
-```
-
-## Formulas
-- Interes simple: monto bruto = P * (1 + r * t)
-- Interes compuesto: monto bruto = P * (1 + r) ^ t
-- Interes bruto = monto bruto - P
-- Interes neto = interes bruto * (1 - impuesto - gastos)
-- Monto neto = P + interes neto
-
-Donde:
-- P = capital inicial
-- r = tasa anual (decimal)
-- t = tiempo en anos
-- impuesto y gastos = porcentajes (decimales)
-
-## Notas
-- Impuesto y gastos son opcionales; si se dejan vacios se asumen 0%.
-- Si impuesto + gastos superan 100%, el interes neto puede ser negativo.
